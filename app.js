@@ -9,11 +9,11 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/signup.html");
+    res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/", function (req, res) {
-    const firstName = req.body.floatingFirstName;
+    // const firstName = req.body.floatingFirstName;
     const lastName = req.body.floatingLastName;
     const email = req.body.floatingEmail;
     const data = {
